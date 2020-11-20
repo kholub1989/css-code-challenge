@@ -1,13 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>V+V Code Challenge - Toggle Switch</title>
+  <style>
+    *,
+    *:before,
+    *:after {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      outline: 0;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #7a86cb;
+    }
+
+    input[type=checkbox] {
+      height: 0;
+      width: 0;
+      visibility: hidden;
+    }
+
+    label {
+      position: relative;
+      cursor: pointer;
+      height: 50px;
+      width: 100px;
+      background: rgba(230, 231, 242, 0.15);
+      border: 2px solid #4c537e;
+      border-radius: 100px;
+    }
+
+    label:after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: calc(100% - 44px);
+      width: 42px;
+      height: 42px;
+      background: #E6E7F2;
+      border: 2px solid #E6E7F2;
+      border-radius: 90px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    input:checked+label {
+      background: rgba(0, 0, 0, 0.5);
+      border-color: rgba(0, 0, 0, 0.35);
+    }
+
+    input:checked+label:after {
+      background: rgba(0, 0, 0, 0.5);
+      border-color: rgba(0, 0, 0, 0.35);
+      left: 44px;
+      transform: translateX(-100%);
+    }
+  </style>
 </head>
+
 <body>
   <input id="toggle" name="toggle" type="checkbox">
-    <label for="toggle">
+  <label for="toggle">
   </label>
   <!--
   PALETTE: 
@@ -25,4 +86,5 @@
     Circle border color: #E6E7F2
   -->
 </body>
+
 </html>
