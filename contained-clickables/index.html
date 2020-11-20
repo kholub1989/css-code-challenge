@@ -1,10 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;500;600;800&display=swap" rel="stylesheet">
   <title>V+V Code Challenge - Contained Clickables</title>
 </head>
+<style>
+  *,
+  *:before,
+  *:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 62.5%;
+  }
+
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #7a86cc;
+  }
+
+  button {
+    font-family: 'Barlow', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #E6E7F2;
+    border: 2px solid #41486D;
+    box-shadow: 0 15px 30px -10px #41486D,
+      inset 0px 1px 1px 1px #616BA2;
+    background-color: #7480C2;
+    border-radius: 5rem;
+    height: 6rem;
+    width: 15rem;
+    margin: 2rem;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  button:hover {
+    border: 2px solid #616BA2;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0px 1px 1px 1px #7480C2;
+  }
+
+  button:active,
+  button:focus {
+    color: #6849E3;
+    background: #41486D;
+    border: 4px solid #6849E3;
+    box-shadow: inset 0 0 0 1px #4C547F;
+    transition: all 0.2s;
+  }
+
+  button:active::after,
+  button:focus::after {
+    content: "ed!";
+  }
+</style>
+
 <body>
   <button href="#">Click</button>
   <button href="#">Click</button>
@@ -31,4 +94,5 @@
     Barlow (Google Font)
   -->
 </body>
+
 </html>
