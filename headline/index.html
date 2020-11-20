@@ -6,75 +6,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap" rel="stylesheet">
   <title>V+V Code Challenge - Headline</title>
+  <style>
+    *,
+    *:before,
+    *:after {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      /* I'm not sure you specify the correct font-family */
+      font-family: 'Merriweather', serif;
+      font-size: 62.5%;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #7a86cb;
+    }
+
+    .text-wrapper {
+      position: relative;
+    }
+
+    h1 {
+      cursor: pointer;
+      font-weight: 300;
+      font-size: 10rem;
+      text-transform: uppercase;
+      color: #6849e3;
+      letter-spacing: 5px;
+      transition: letter-spacing, 1s;
+    }
+
+    h1:hover {
+      color: #fff;
+      letter-spacing: normal;
+    }
+
+    h1::before,
+    h1::after {
+      position: absolute;
+      content: "";
+      width: 0px;
+      height: 2px;
+      background-color: #6849e3;
+      transform: translateY(-50%);
+      transition: .5s ease-in-out;
+    }
+
+    h1::before {
+      top: 0;
+      right: 0;
+    }
+
+    h1::after {
+      bottom: 0;
+      left: 0;
+    }
+
+    h1:hover::before,
+    h1:hover::after {
+      width: 100%;
+    }
+  </style>
 </head>
-<style>
-  *,
-  *:before,
-  *:after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-
-  html {
-    /* I'm not sure you specify the correct font-family */
-    font-family: 'Merriweather', serif;
-    font-size: 62.5%;
-  }
-
-  body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #7a86cb;
-  }
-
-  .text-wrapper {
-    position: relative;
-  }
-
-  h1 {
-    cursor: pointer;
-    font-weight: 300;
-    font-size: 10rem;
-    text-transform: uppercase;
-    color: #6849e3;
-    letter-spacing: 5px;
-    transition: letter-spacing, 1s;
-  }
-
-  h1:hover {
-    color: #fff;
-    letter-spacing: normal;
-  }
-
-  h1::before,
-  h1::after {
-    position: absolute;
-    content: "";
-    width: 0px;
-    height: 2px;
-    background-color: #6849e3;
-    transform: translateY(-50%);
-    transition: .5s ease-in-out;
-  }
-
-  h1::before {
-    top: 0;
-    right: 0;
-  }
-
-  h1::after {
-    bottom: 0;
-    left: 0;
-  }
-
-  h1:hover::before,
-  h1:hover::after {
-    width: 100%;
-  }
-</style>
 
 <body>
   <div class="text-wrapper">
